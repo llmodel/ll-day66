@@ -1,0 +1,20 @@
+# Environment - for config
+.env
+
+# mac os
+.DS_Store
+
+# logs
+logs/
+*.log
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv

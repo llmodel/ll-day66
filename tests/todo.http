@@ -1,0 +1,26 @@
+### POST - Insert a new todo item
+post http://localhost:8100/todos HTTP/1.1
+Content-Type: application/json
+
+{
+  "item": "Buy sushi.",
+  "status": false
+}
+
+### GET - get the todo list
+get http://localhost:8100/todos HTTP/1.1
+
+### GET - get a todo itme by id
+get http://localhost:8100/todos/2 HTTP/1.1
+
+### PUT - update the todo list by id
+put http://localhost:8100/todos/2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "item": "Buy sushi.",
+  "status": true
+}
+
+### DELETE - delete a todo item by id
+delete http://localhost:8100/todos/1 HTTP/1.1
