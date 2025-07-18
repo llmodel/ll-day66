@@ -1,0 +1,26 @@
+meta {
+  name: Add cafe
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8000/cafe/add
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Caffee Shack",
+    "map_url": "string1",
+    "img_url": "string2",
+    "location": "Seattle",
+    "has_sockets": true,
+    "has_toilet": true,
+    "has_wifi": true,
+    "can_take_calls": true,
+    "seats": "100",
+    "coffee_price": "$3.50"
+  }
+}

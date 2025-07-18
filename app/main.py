@@ -11,7 +11,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from middlewares.logger import StatusCodeLoggerMiddleware,configure_fastapi_logging, setup_logger
 from core.config import settings
 from dependencies import init_db
-from routers import root, todo
+from routers import root, cafe
+from fastapi.staticfiles import StaticFiles  # <-- Import this
 
 
 #####  STARTUP / SHUTDOWN EVENTS  #####
@@ -53,9 +54,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Mount the static directory
+# This makes the 'static' folder available under the URL path "/static"
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
 # Include routers
 app.include_router(root.router)
-app.include_router(todo.router)
+app.include_router(cafe.router)
 
 if __name__ == "__main__":
     import uvicorn

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title> {# This will be rendered dynamically #}
+    <link href="{{ url_for('static', path='styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <p>Use the API endpoints to manage cafe data.</p>
+    <p>Check the <a href="/docs">/docs</a> for the interactive API documentation.</p>
+</body>
+</html>

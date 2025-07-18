@@ -1,0 +1,15 @@
+meta {
+  name: Update price
+  type: http
+  seq: 2
+}
+
+patch {
+  url: http://localhost:8000/cafe/update-price/1?new_price=$5.25
+  body: none
+  auth: inherit
+}
+
+params:query {
+  new_price: $5.25
+}
